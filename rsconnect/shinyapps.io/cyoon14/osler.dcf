@@ -1,0 +1,13 @@
+name: osler
+title: osler
+username: cyoon14
+account: cyoon14
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12632468
+bundleId: 10348567
+url: https://cyoon14.shinyapps.io/osler/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .ipynb_checkpoints/osler_intern_schedule_final-checkpoint.ipynb|.RData|intern|jarsar

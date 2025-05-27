@@ -1,0 +1,13 @@
+name: osler2
+title: osler2
+username: cyoon14
+account: cyoon14
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 13640657
+bundleId: 9958005
+url: https://cyoon14.shinyapps.io/osler2/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .ipynb_checkpoints/osler_intern_schedule_final-checkpoint.ipynb|.ipynb_checkpoints/osler_JARSAR_schedule_final-checkpoint.ipynb|.RData|Bayview_Unit_Table.xlsx|block_view.tsv|call_schedule_master.yaml|old_schedule/Resident Schedule 2024-2025_012725.xlsx|old_schedule/Resident Schedule 2024-2025_1224.xlsx|old_schedule/Resident Schedule 2024-2025.xlsx|osler_JARSAR_schedule_final.ipynb|README.md|Resident Schedule 2024-2025.xlsx|2024

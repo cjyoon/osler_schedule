@@ -1,0 +1,431 @@
+block_dates:
+  1A: 7/1/2024  7/8/2024
+  1B: 7/9/2024  7/22/2024
+  2A: 7/23/2024 8/5/2024
+  2B: 8/6/2024  8/19/2024
+  3A: 8/20/2024 9/2/2024
+  3B: 9/3/2024  9/16/2024
+  4A: 9/17/2024 9/30/2024
+  4B: 10/1/2024 10/14/2024
+  5A: 10/15/2024  10/28/2024
+  5B: 10/29/2024  11/11/2024
+  6A: 11/12/2024  11/25/2024
+  6B: 11/26/2024  12/9/2024
+  7A: 12/10/2024  12/19/2024
+  'Holiday 1': 12/20/2024 12/26/2024
+  'Holiday 2': 12/27/2024 1/2/2025
+  7B: 1/3/2025  1/13/2025
+  8A: 1/14/2025 1/27/2025
+  8B: 1/28/2025 2/10/2025
+  9A: 2/11/2025 2/24/2025
+  9B: 2/25/2025 3/10/2025
+  10A: 3/11/2025  3/24/2025
+  10B: 3/25/2025  4/7/2025
+  11A: 4/8/2025  4/21/2025
+  11B: 4/22/2025  5/5/2025
+  12A: 5/6/2025 5/19/2025
+  12B: 5/20/2025  6/2/2025
+  13A: 6/3/2025 6/16/2025
+  13B: 6/17/2025  6/30/2025 
+
+# july1_offset: 4
+
+
+FirmSAR:
+  type1: 
+    blocks: ["1A"]
+    A: 'News Off Olds  Book  Olds  Nights  Nights  Nights  *post'
+    B: 'Olds Book Nights  Nights  Nights  News  Off News'
+    C: 'Nights Nights  News  Off News  Olds  Book  Olds'
+  type2:
+    blocks: ["1B", "2A", "2B", "3A", "3B"]
+    A: 'Olds  Olds  BOOK  BOOK  Olds  Night Night Night Night Nights  News  OFF OFF News'
+    B: 'Nights  Nights  Nights  Nights  Nights  News  News OFF  OFF News  Olds  BOOK  BOOK  Olds'
+    C: 'News  News  OFF OFF News  Olds  Olds BOOK BOOK  Olds  Nights  Nights  Nights  Nights  *post'
+  type3_: 
+    blocks: ['4A', '4B', '5A', '5B', '6A', '6B', '8A', '8B', '9A', '9B', '10A', '10B', '11A', '11B', '12A', '12B', '13A', '13B']
+    A: 'Olds  Olds  Olds  Olds  BOOK  BOOK  Olds News News  News  News  off off News' 
+    B: 'News  News  News  News  off off News Olds Olds  Olds  Olds  BOOK  BOOK  Olds'
+  type4_:
+    blocks: ['7A']
+    A: 'News  News  News  News  Off Book  Olds  Olds  Olds  Olds'
+    B: 'Olds  Olds  Olds  Olds  Book  Off News  News  News  News'
+  type5_:
+    blocks: ['Holiday 1', 'Holiday 2']
+    A: 'Olds  Olds  Olds  News  News  News  News'
+    B: 'News  News  News  Olds  Olds  Olds  Olds'
+  type6_: 
+    blocks: ['7B']
+    A: 'News  Off Off News  News  Olds  Olds  Olds  Book  Book  Olds'
+    B: 'Olds  Book  Book  Olds  Olds  News  News  News  Off Off News'
+
+FirmJAR:
+  type1:
+    blocks: ['1A']
+    A: 'Barker Barker Barker  Barker  Barker/Janeway  Barker/Janeway  Off Off'
+    B: 'Janeway Janeway Janeway Janeway Off Off Barker/Janeway  Barker/Janeway'
+    C: 'Longcope Longcope Longcope  Longcope  Longcope/Thayer Longcope/Thayer Off Off'
+    D: 'Thayer Thayer Thayer  Thayer  Off Off Longcope/Thayer Longcope/Thayer'
+    E: 'Brancati Brancati Brancati  Brancati  Brancati/MPC  Brancati/MPC  Off Off'
+    F: 'MPC MPC MPC MPC Off Off Brancati/MPC  Brancati/MPC'
+  type2:
+    blocks: ['1B', '2A', '2B', '3A', '3B']
+    A: 'Barker  Barker  Barker  Barker  Barker/Janeway  Barker/Janeway  Barker Barker Barker  Barker  Barker  Off Off Barker'
+    B: 'Janeway Janeway Janeway Janeway Off Off Janeway Janeway Janeway Janeway Janeway Barker/Janeway  Barker/Janeway  Janeway'
+    C: 'Longcope  Longcope  Longcope  Longcope  Longcope/Thayer Longcope/Thayer Longcope Longcope Longcope  Longcope  Longcope  Off Off Longcope'
+    D: 'Thayer  Thayer  Thayer  Thayer  Off Off Thayer Thayer Thayer  Thayer  Thayer  Longcope/Thayer Longcope/Thayer Thayer' 
+    E: 'Brancati  Brancati  Brancati  Brancati  Brancati/MPC  Brancati/MPC  Brancati Brancati Brancati  Brancati  Brancati  Off Off Brancati'
+    F: 'MPC MPC MPC Off Off Brancati/MPC  Brancati/MPC MPC  MPC MPC MPC Brancati/MPC  Brancati/MPC  MPC'
+
+MPC:
+  type1:
+    blocks: ['1A']
+    A: 'DAYS DAYS DAYS  DAYS  OFF DAYS  DAYS  DAYS'
+    B: 'NIGHTS NIGHTS NIGHTS  NIGHTS  NIGHTS  OFF NIGHTS  NIGHTS  *POST'
+  type2:
+    blocks: ['1B', '2A', '2B', '3A', '3B']
+    A: 'DAYS  DAYS  DAYS  OFF DAYS  DAYS  DAYS NIGHTS NIGHTS  NIGHTS  NIGHTS  OFF NIGHTS  NIGHTS  *POST'
+    B: 'NIGHTS  NIGHTS  NIGHTS  NIGHTS  OFF NIGHTS  NIGHTS POST DAYS  DAYS  OFF DAYS  DAYS  DAYS'
+  type3:
+    blocks: ['4A', '4B', '5A', '5B', '6A', '6B', '8A', '8B', '9A', '9B', '10A', '10B', '11A', '11B', '12A', '12B']
+    Z: 'DAYS  DAYS  DAYS  OFF DAYS  DAYS  DAYS DAYS DAYS  DAYS  OFF DAYS  DAYS  DAYS'
+  type4:
+    blocks: ['7A']
+    Z: 'DAYS  DAYS  DAYS  OFF DAYS  DAYS  DAYS  DAYS  DAYS  DAYS'
+  type5:
+    blocks: ['7B']
+    Z: 'OFF DAYS  DAYS  DAYS  DAYS  DAYS  DAYS  OFF DAYS  DAYS  DAYS'
+  type6:
+    blocks: ['Holiday 1', 'Holiday 2']
+    Z: 'DAYS  DAYS  DAYS  DAYS  DAYS  DAYS  DAYS'
+
+Brancati:
+  type1: 
+    blocks: ['1A']
+    A: 'News Off  Olds  Book  Olds  Nights  Nights  Nights  *post'
+    B: 'Book  Nights  Nights  Nights  News^ Off News'
+    C: 'Nights  News^  Off News  Olds  Book  Olds'
+  type2:
+    blocks: ['1B', '2A', '2B', '3A', '3B']
+    A: 'Days  Days  Days  Days  BOOK  BOOK  Nights Nights Nights  Nights  News^  OFF OFF Days'
+    B: 'Nights  Nights  Nights  Nights  Nights  Nights  News^ OFF OFF Days  Days  BOOK  BOOK  Days'
+    C: 'Days  Days  Days  Days  OFF OFF Days BOOK BOOK  Days  Nights  Nights  Nights  Nights  *post'
+  type3_: # no specific position assigned
+    blocks: ['4A', '4B', '5A', '5B', '6A', '6B', '8A', '8B', '9A', '9B', '10A', '10B', '11A', '11B', '12A', '12B', '13A', '13B']
+    A: 'Olds  Olds  Olds  Olds  BOOK  BOOK  Olds News News  News  News  off off News'
+    B: 'News  News  News  News  off off News Olds Olds  Olds  Olds  BOOK  BOOK  Olds'
+  type4_: # no specificfic position assigned
+    blocks: ['7A']
+    #Z: 'News/Olds News/Olds News/Olds News/Olds Off/Book Book/Off Olds/News Olds/News Olds/News Olds/News'
+    A: 'News  News  News  News  Off Book  Olds  Olds  Olds  Olds'
+    B: 'Olds  Olds  Olds  Olds  Book  Off News  News  News  News'
+  type5_: # no specific position assigned
+    blocks: ['7B']
+    #Z: 'News/Olds Off/Book Off/Book News/Olds  News/Olds/  Olds/News  Olds/News  Olds/News  Book/Off  Book/Off  Olds/News'
+    A: 'News  Off Off News  News  Olds  Olds  Olds  Book  Book  Olds'
+    B: 'Olds  Book  Book  Olds  Olds  News  News  News  Off Off News' 
+  type6_: # no specific position assigned
+    blocks: ['Holiday 1', 'Holiday 2']
+    #Z: 'Olds/News  Olds/News  Olds/News  News/Olds  News/Olds  News/Olds News/Olds'
+    A: 'Olds  Olds  Olds  News  News  News  News'
+    B: 'News  News  News  Olds  Olds  Olds  Olds'
+
+MICU:
+  type1:
+    blocks: ["1A"]
+    A: 'Call  Post  Good  Call  Post  Off Call  Post'
+    B: 'Off Call  Post  Good  Call  Post  Off Call  *post'
+    C: 'Post  Good  Call  Post  Off Call  Post  Good'
+    D: 'Call  Post  Off Call  Post  Good  Call  Post'
+    E: 'Good  Call  Post  Off Call  Post  Good  Call  *post'
+    F: 'Post  Off Call  Post  Good  Call  Post  Off'
+  type2a:
+    blocks: ['2A', '3A',  '4A',  '5A',  '6A',  '8A',  '9A', '10A', '11A',  '12A',  '13A']
+    A: 'Call  Post  Good  Call  Post  Off Call  Post  Good  Call  Post  Off Call  Post'
+    B: 'Off Call  Post  Good  Call  Post  Off Call  Post  Good  Call  Post  Off Call  *post'
+    C: 'Post  Good  Call  Post  Off Call  Post  Good  Call  Post  Off Call  Post  Good'
+    D: 'Call  Post  Off Call  Post  Good  Call  Post  Off Call  Post  Good  Call  Post'
+    E: 'Off Call  Post  Off Call  Post  Good  Call  Post  Off Call  Post  Good  Call  *post'
+    F: 'Good  Off Call  Post  Good  Call  Post  Off Call  Post  Good  Call  Post  Off'
+
+  type2b:
+    blocks: ['1B',  '2B', '3B', '4B', '5B', '6B', '8B', '9B', '10B', '11B', '12B', '13B']
+    A: 'Off Call  Post  Off Call  Post  Good  Call  Post  Off Call  Post  Good  Call  *post'
+    B: 'Post  Good  Call  Post  Off Call  Post  Good  Call  Post  Off Call  Post  Good'
+    C: 'Call  Post  Off Call  Post  Good  Call  Post  Off Call  Post  Good  Call  Post'
+    D: 'Off Call  Post  Good  Call  Post  Off Call  Post  Good  Call  Post  Off Call  *post'
+    E: 'Good  Off Call  Post  Good  Call  Post  Off Call  Post  Good  Call  Post  Off'
+    F: 'Call  Post  Good  Call  Post  Off Call  Post  Good  Call  Post  Off Call  Post'
+
+  type3:
+    blocks: ['7A']
+    A: 'Call  Post  Good  Call  Post  Off Call  Post  Good  Call  *post'
+    B: 'Off Call  Post  Good  Call  Post  Off Call  Post  Good'
+    C: 'Post  Good  Call  Post  Off Call  Post  Good  Call  Post'
+    D: 'Call  Post  Off Call  Post  Good  Call  Post  Off Call  *post'
+    E: 'Good  Call  Post  Off Call  Post  Good  Call  Post  Off'
+    F: 'Post  Off Call  Post  Good  Call  Post  Off Call  Post'
+  type4: 
+    blocks: ['7B']
+    A: 'Off Call  Post  Good  Call  Post  Off Call  Post  Good  Call  *post'
+    B: 'Post  Off Call  Post  Good  Call  Post  Off Call  Post  Good'
+    C: 'Call  Post  Good  Call  Post  Off Call  Post  Good  Call  Post'
+    D: 'Good  Call  Post  Off Call  Post  Good  Call  Post  Off Call  *post'
+    E: 'Post  Good  Call  Post  Off Call  Post  Good  Call  Post  Off'
+    F: 'Call  Post  Off Call  Post  Good  Call  Post  Off Call  Post'
+    
+  type5:
+    blocks: ['Holiday 1', 'Holiday 2']
+    A: 'Post  Good  Call  Post  off Call  Post'
+    B: 'Call  Post  Good  Call  Post  off Call  *post'
+    C: 'Good  Call  Post  off Call  Post  Good'
+    D: 'Post  off Call  Post  Good  Call  Post'
+    E: 'Call  Post  off Call  Post  Good  Call  *post'
+    F: 'DATO  Call  Post  Good  Call  Post  off'
+
+CCU:
+  type1:
+    blocks: ['1A']
+    A: 'Call  Post  Good  Call  Post  Off Call  Post'
+    B: 'Off Call  Post  Good  Call  Post  Off Call  *Post'
+    C: 'Post  Good  Call  Post  Off Call  Post  Good'
+  type2a:
+    blocks: ['2A', '3A', '4A', '5A', '6A', '8A', '9A', '10A', '11A', '12A', '13A']
+    A: 'Call  Post  Good  Call  Post  Off Call Post  Good  Call  Post  Off Call  Post'
+    B: 'Off Call  Post  Good  Call  Post  Off Call  Post  Good  Call  Post  Off Call  *Post'
+    C: 'Post  Good  Call  Post  Off Call  Post Good Call  Post  Off Call  Post  Good'
+  type2b:
+    blocks: ['1B', '2B', '3B', '4B', '5B', '6B', '8B', '9B', '10B', '11B', '12B', '13B']
+    A: 'Good  Call  Post  Off Call  Post  Good Call Post  Off Call  Post  Good  Call  *post'
+    B: 'Post  Good  Call  Post  Off Call  Post Good Call  Post  Off Call  Post  Good'
+    C: 'Call  Post  Off Call  Post  Good  Call Post Off Call  Post  Good  Call  Post'
+  type4:
+    blocks: ['7A']
+    A: 'Post  Good  Call  Post  Off Call  Post  Good  Call  Post'
+    B: 'Call  Post  Good  Call  Post  Off Call  Post  Good  Call  *post'
+    C: 'Good  Call  Post  Good  Call  Post  Off Call  Post  Good'
+  type5:
+    blocks: ['7B']
+    A: 'Call  Post  Off Call  Post  Good  Call  Post  Off Call  Post'
+    B: 'Good  Call  Post  Off Call  Post  Good  Call  Post  Off Call  *post'
+    C: 'Post  Off Call  Post  Good  Call  Post  Off Call  Post  Good'
+  type6:
+    blocks: ['Holiday 1', 'Holiday 2']
+    A: 'Good  Call  Post  Good  Call  Post  Good'
+    B: 'Post  Good  Call  Post  Good  Call  Post'
+    C: 'Call  Post  Good  Call  Post  Good  Call  *post'
+
+Subspecialty:
+  type1: 
+    blocks: ['1A']
+    A: 'Days  Days  Days  Days  Days  Book  OFF Days'
+    B: 'Days  Days  Days  Days  Days  OFF Book  Days'
+  type2_: 
+    blocks: ['1B', '2A', '2B', '3A', '3B', '4A', '4B', '5A', '5B', '6A', '6B', '8A', '8B', '9A', '9B', '10A', '10B', '11A', '11B', '12A', '12B', '13A', '13B']
+    A: 'Days  Days  Days  Days  Book  Book  Days Days Days  Days  Days  off off Days'
+    B: 'Days  Days  Days  Days  off off Days Days Days  Days  Days  Book  Book  Days'
+  type3_:
+    blocks: ['7A']
+    A: 'Days  Days  Days  Book  Off Days  Days  Days  Days  Days'
+    B: 'Days  Days  Days  Off Book  Days  Days  Days  Days  Days'
+  type4_:
+    blocks: ['7B']
+    A: 'Days  Off Off Days  Days  Days  Days  Days  Book  Book  Days'
+    B: 'Days  Book  Book  Days  Days  Days  Days  Days  Off Off Days'
+  type5_:
+    blocks: ['Holiday 1', 'Holiday 2']
+    A: 'Days  Days  Days  Days  Days  Days  Days'
+    B: 'Days  Days  Days  Days  Days  Days  Days'
+
+###### ONC ROTATIONS ############ Onc rotations have an off day that is by day of the week (make sure this is the case for 1A, 7A, 7B, Holiday blocks)
+Solids:
+  type1:
+    blocks: ["1A", "2A", "3A", "4A", "5A", "6A", "7A", "8A", "9A", "10A", "11A", "12A", "13A", "1B", "2B", "3B", "4B", "5B", "6B", "7B", "8B", "9B", "10B", "11B", "12B", "13B", "Holiday 1", "Holiday 2"]
+    off: 'SATURDAY' #OFF on Saturdays
+
+MTL:
+  type1:
+    blocks: ["1A", "2A", "3A", "4A", "5A", "6A", "7A", "8A", "9A", "10A", "11A", "12A", "13A", "1B", "2B", "3B", "4B", "5B", "6B", "7B", "8B", "9B", "10B", "11B", "12B", "13B", "Holiday 1", "Holiday 2"]
+    off: 'SATURDAY' #OFF on Saturdays
+
+Leuks:
+  type1:
+    blocks: ["1A", "2A", "3A", "4A", "5A", "6A", "7A", "8A", "9A", "10A", "11A", "12A", "13A", "1B", "2B", "3B", "4B", "5B", "6B", "7B", "8B", "9B", "10B", "11B", "12B", "13B", "Holiday 1", "Holiday 2"]
+    off: 'MONDAY' #OFF on Saturdays
+
+####################################
+
+'GenCards':
+  type1: 
+    blocks: ['1A']
+    A: 'Call Post Good  Short Call  Post  Off Short'
+    C: 'Off Short Call  Post  Off Short Call  Post'
+  type2: 
+    blocks: ['2A',  '3A', '4A', '5A', '6A',  '8A',  '9A', '10A', '11A', '12A', '13A']
+    A: 'Good  Short Call  Post  Off Short Call Post Good  Short Call  Post  Off Short'
+    C: 'Call  Post  Good  Short Call  Post  Off Short Call  Post  Off Short Call  Post'
+  type3:
+    blocks: ['2B', '3B', '4B', '5B', '6B',  '8B',  '9B', '10B', '11B', '12B', '13B']
+    A: 'Call  Post  Good  Short Call  Post  Off Short Call  Post  Off Short Call  Post'
+    C: 'Good  Short Call  Post  Off Short Call Post Good  Short Call  Post  Off Short'
+  type4:
+    blocks: ['7A']
+    A: 'Good  Short Call  Post  Off Short Call  Post  Good  Short'
+    C: 'Call  Post  Good  Short Call  Post  Off Short Call  Post'
+  type5:
+    blocks: ['7B']
+    A: 'Short Call  Post  Off Short Call  Post  Good  Short Call  Post'
+    C: 'Post  Off Short Call  Post  Good  Short Call  Post  Off Short'
+  type6:
+    blocks: ['Holiday 1', 'Holiday 2']
+    A: 'Call  Post  Off Short Call  Post  Good'
+    C: 'Good  Short Call  Post  Off Short Call  *post'
+
+Cardiomyopathy:
+  type1: 
+    blocks: ['1A']
+    B: 'Post Good Short Call  Post  Off Short Call  *Post'
+    D: 'Short Call  Post  Good  Short Call  Post  Off'
+  type2: 
+    blocks: ['2A',  '3A', '4A', '5A', '6A',  '8A',  '9A', '10A', '11A', '12A', '13A']
+    B: 'Short Call  Post  Off Short Call  Post Good Short Call  Post  Off Short Call *Post'
+    D:  'Post Good  Short Call  Post  Off Short Call  Post  Good  Short Call  Post  Off'
+  type3:
+    blocks: ['2B', '3B', '4B', '5B', '6B',  '8B',  '9B', '10B', '11B', '12B', '13B']
+    B: 'Post  Good  Short Call  Post  Off Short Call  Post  Good  Short Call  Post  Off'
+    D: 'Short Call  Post  Off Short Call  Post Good Short Call  Post  Off Short Call  *post'
+  type4:
+    blocks: ['7A']
+    B: 'Short Call  Post  Off Short Call  Post  Good  Short Call  *post'
+    D: 'Post  Good  Short Call  Post  Off Short Call  Post  Good'
+  type5:
+    blocks: ['7B']
+    B: 'Call  Post  Off Short Call  Post  Good  Short Call  Post  Off'
+    D: 'Off Short Call  Post  Good  Short Call  Post  Off Short Call  *post'
+  type6:
+    blocks: ['Holiday 1', 'Holiday 2']
+    B: 'Post  Off Short Call  Post  Good  Short'
+    D: 'Short  Call  Post  Off Short Call  Post'
+
+################### Bayview units have a separate table###################
+# BMICU:
+
+# BCCU:
+###########################################################################
+Supervisor:
+  type1:
+    blocks: ['4A', '4B', '5A', '5B', '6A', '6B', '8A', '8B', '9A', '9B', '10A', '10B', '11A', '11B', '12A', '12B', '13A', '13B']
+    Z: 'Wolf  Wolf  Wolf  Wolf  OFF Wolf  Wolf Wolf Wolf  Wolf  Wolf  OFF Wolf  Wolf  *post'
+  type2: 
+    blocks: ['7A']
+    Z: 'Wolf  Wolf  Wolf  Wolf  Off Wolf  Wolf  Wolf  Wolf  Wolf  *post'
+  type3: 
+    blocks: ['7B']
+    Z: 'Wolf  Off Wolf  Wolf  Wolf  Wolf  Wolf  Wolf  Off Wolf  Wolf  *post'
+  type4: 
+    blocks: ['Holiday 1', 'Holiday 2']
+    Z: 'Wolf  Wolf  Wolf  Wolf  Wolf  Wolf  Wolf  *post'
+
+NightWatch:
+  type1: 
+    blocks: ['1A']
+    Z: 'NIGHTS  NIGHTS  NIGHTS  NIGHTS  OFF NIGHTS  NIGHTS  NIGHTS  *POST'
+  type2: 
+    blocks: ['1B', '2A', '2B', '3A', '3B', '4A', '4B', '5A', '5B', '6A', '6B', '8A', '8B', '9A', '9B', '10A', '10B', '11A', '11B', '12A', '12B', '13A', '13B']
+    Z: 'NIGHTS  NIGHTS  NIGHTS  OFF NIGHTS  NIGHTS  NIGHTS NIGHTS NIGHTS  NIGHTS  OFF NIGHTS  NIGHTS  NIGHTS  *POST'
+  type3:
+    blocks: ['7A']
+    Z: 'NIGHTS  NIGHTS  NIGHTS  NIGHTS  OFF NIGHTS  NIGHTS  NIGHTS  NIGHTS  NIGHTS *POST'
+  type4:
+    blocks: ['7B']
+    Z: 'NIGHTS  OFF NIGHTS  NIGHTS  NIGHTS  NIGHTS  NIGHTS  NIGHTS  OFF NIGHTS  NIGHTS *POST'
+  type5:
+    blocks: ['Holiday 1', 'Holiday 2']
+    Z:  'NIGHTS NIGHTS  NIGHTS  NIGHTS  NIGHTS  NIGHTS  NIGHTS *POST'
+
+NATODATO:
+  type1: 
+    blocks: ['4A', '4B', '5A', '5B', '6A', '6B', '8A', '8B', '9A', '9B', '10A', '10B', '11A', '11B', '12A', '12B', '13A', '13B']
+    Z: 'NATO/DATO OFF NATO/DATO NATO/DATO NATO/DATO NATO/DATO NATO/DATO NATO/DATO OFF NATO/DATO NATO/DATO NATO/DATO NATO/DATO NATO/DATO'
+  type2:
+    blocks: ['7A']
+    Z: 'NATO/DATO OFF NATO/DATO NATO/DATO NATO/DATO NATO/DATO NATO/DATO NATO/DATO OFF NATO/DATO'
+  type3:
+    blocks: ['7B']
+    Z: 'NATO/DATO NATO/DATO NATO/DATO NATO/DATO NATO/DATO OFF NATO/DATO NATO/DATO NATO/DATO NATO/DATO NATO/DATO'
+  type4:
+    blocks: ['Holiday 1', 'Holiday 2']
+    Z: 'NATO/DATO NATO/DATO NATO/DATO NATO/DATO NATO/DATO NATO/DATO NATO/DATO'
+
+Relief:
+  type1: 
+    blocks: ['1A']
+    Z: 'OFF OFF OFF OFF NW_Resident MPC_NIGHTS  NW_Intern POST'
+  type2: 
+    blocks: ['1B', '2A', '2B', '3A', '3B']
+    Z: 'Jeopardy  OFF  OFF NW_Resident MPC_NIGHTS  NW_Intern POST MPC_Day Q OFF NW_Resident MPC_nights  NW_Intern POST'
+  type3:
+    blocks: ['7A']
+    Z: 'OFF   NATO/DATO OFF NW_Resident Wolf  NW_Intern  OFF OFF   NATO/DATO OFF'
+  type4:
+    blocks: ['7B']
+    Z: 'NW_Resident Wolf  NW_Intern  OFF OFF   NATO/DATO OFF NW_Resident Wolf  NW_Intern OFF'
+  type5:
+    blocks: ['4A', '4B', '5A', '5B', '6A', '6B', '8A', '8B', '9A', '9B', '10A', '10B', '11A', '11B', '12A', '12B', '13A', '13B']
+    Z: 'OFF   NATO/DATO OFF NW_Resident Wolf  NW_Intern POST OFF  NATO/DATO OFF NW_Resident Wolf  NW_Intern POST'
+
+Triage:
+  type1: 
+    blocks: ['1A']
+    Z: 'On  On  OFF On  On  On  On  On'
+  type2: 
+    blocks: ['1B', '2A', '2B', '3A', '3B', '4A', '4B', '5A', '5B', '6A', '6B', '8A', '8B', '9A', '9B', '10A', '10B', '11A', '11B', '12A', '12B', '13A', '13B']
+    Z: 'On  OFF On  On  On  On  On On OFF On  On  On  On  On'
+  type3:
+    blocks: ['7A']
+    Z: 'On  OFF On  On  On  On  On  On  OFF On'
+  type4:
+    blocks: ['7B']
+    Z: 'On  On  On  On  On  OFF On  On  On  On  On'
+  type5:
+    blocks: ['Holiday 1', 'Holiday 2']
+    Z: 'On  On  On  On  On  On  On'
+
+Jeopardy:
+  type1:
+    blocks: ["1A", "2A", "3A", "4A", "5A", "6A", "7A", "8A", "9A", "10A", "11A", "12A", "13A", "1B", "2B", "3B", "4B", "5B", "6B", "7B", "8B", "9B", "10B", "11B", "12B", "13B", "Holiday 1", "Holiday 2"]
+    Z: 'Jeopardy Jeopardy Jeopardy Jeopardy Jeopardy Jeopardy Jeopardy Jeopardy Jeopardy Jeopardy Jeopardy Jeopardy Jeopardy Jeopardy'
+
+
+'Off':
+  type1:
+    blocks: ["1A", "2A", "3A", "4A", "5A", "6A", "7A", "8A", "9A", "10A", "11A", "12A", "13A", "1B", "2B", "3B", "4B", "5B", "6B", "7B", "8B", "9B", "10B", "11B", "12B", "13B", "Holiday 1", "Holiday 2"]
+    Z: 'OFF OFF OFF OFF OFF OFF OFF OFF OFF OFF OFF OFF OFF OFF'
+
+Vacation:
+  type1:
+    blocks: ["1A", "2A", "3A", "4A", "5A", "6A", "7A", "8A", "9A", "10A", "11A", "12A", "13A", "1B", "2B", "3B", "4B", "5B", "6B", "7B", "8B", "9B", "10B", "11B", "12B", "13B", "Holiday 1", "Holiday 2"]
+    Z: 'VACATION VACATION VACATION VACATION VACATION VACATION VACATION VACATION VACATION VACATION VACATION VACATION VACATION VACATION'
+
+# Ambulatory:
+#   type1:
+#     blocks: ["1A", "2A", "3A", "4A", "5A", "6A", "7A", "8A", "9A", "10A", "11A", "12A", "13A", "1B", "2B", "3B", "4B", "5B", "6B", "7B", "8B", "9B", "10B", "11B", "12B", "13B"]
+#     Z: 'DAY DAY DAY DAY OFF OFF DAY DAY DAY DAY DAY OFF OFF DAY'
+
+
+# ******************* Default schedule blocks
+#   type1: 
+#     blocks: ['1A']
+#     A: 
+#   type2: 
+#     blocks: ['1B', '2A', '2B', '3A', '3B', '4A', '4B', '5A', '5B', '6A', '6B', '8A', '8B', '9A', '9B', '10A', '10B', '11A', '11B', '12A', '12B', '13A', '13B']
+#     A:
+#   type3:
+#     blocks: ['7A']
+#     A:
+#   type4:
+#     blocks: ['7B']
+#     A:
+#   type5:
+#     blocks: ['Holiday 1', 'Holiday 2']
+#     A: 
