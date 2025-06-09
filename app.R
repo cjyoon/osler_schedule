@@ -2,11 +2,11 @@ library(tidyverse)
 library(rsconnect)
 library(DT)
 library(shiny)
-# 
+#
 # time zone set to nyc
 Sys.setenv(TZ = "America/New_York")
-
-
+# 
+# 
 # setwd("~/Dropbox/Osler/Osler_shiny")
 # 
 # 
@@ -16,8 +16,10 @@ Sys.setenv(TZ = "America/New_York")
 # intern_file_list <- list.files('intern_schedule/', pattern = "\\.tsv$", full.names = TRUE)
 # jarsar_file_list <- list.files('jar_sar_schedule/', pattern = "\\.tsv$", full.names = TRUE)
 # 
+# jarsar_file_list2 <- list.files('jarsar2025/schedule//', pattern = "\\.tsv$", full.names = TRUE)
+# 
 # # Read each .tsv file into a list of data frames
-# data_list <- lapply(c(intern_file_list, jarsar_file_list), read_delim)
+# data_list <- lapply(c(intern_file_list, jarsar_file_list, jarsar_file_list2), read_delim)
 # 
 # # Convert columns to consistent types
 # data_list <- lapply(data_list, function(df) {
@@ -56,7 +58,7 @@ Sys.setenv(TZ = "America/New_York")
 # #
 # #
 # write_delim(new_table, file='~/Dropbox/Osler/Osler_shiny/osler_schedule_table.tsv', delim='\t')
-# 
+
 
 find_block <- function(input_date, block_table) {
   # Extract column names
@@ -97,10 +99,10 @@ find_block <- function(input_date, block_table) {
 # Function to filter blocks and return the subset
 filter_blocks <- function(block_id, block_table) {
   col_names <- colnames(block_table)
-  
+
   # Find the index of the given block_id
   match_index <- which(grepl(paste0("^", block_id, " "), col_names))
-  
+
   # If block_id is found, subset the table
   if (length(match_index) > 0) {
     return(block_table[, c(1, match_index:ncol(block_table))])  # Keep 'name' column
@@ -108,7 +110,21 @@ filter_blocks <- function(block_id, block_table) {
     return(block_table)  # Return full table if block_id is not found
   }
 }
-
+# filter_blocks <- function(block_id, block_table) {
+#   col_names <- colnames(block_table)
+#   
+#   # Find the indices of all matching block_id columns
+#   match_indices <- which(grepl(paste0("^", block_id, " "), col_names))
+#   
+#   # If two or more matches, select only the second one
+#   if (length(match_indices) >= 2) {
+#     return(block_table[, c(1, match_indices[2])])  # Keep 'name' column + second match
+#   } else if (length(match_indices) == 1) {
+#     return(block_table[, c(1, match_indices[1])])  # Only one match found
+#   } else {
+#     return(block_table)  # Return full table if no match found
+#   }
+# }
 remove_unnamed_columns <- function(df) {
   df <- df[, !grepl("^Unnamed", colnames(df))]
   df = df %>% filter(!is.na(name))
@@ -118,7 +134,9 @@ remove_unnamed_columns <- function(df) {
 new_table = read_delim('osler_schedule_table.tsv', delim='\t')
 intern_block_table = remove_unnamed_columns(read_delim('block_schedule/intern_block_view.tsv', delim='\t'))
 jarsar_block_table = remove_unnamed_columns(read_delim('block_schedule/jar_sar_block_view.tsv', delim='\t'))
+jarsar_block_table2 = remove_unnamed_columns(read_delim('block_schedule/block_view_jarsar2025.tsv', delim='\t'))
 
+jarsar_block_table = jarsar_block_table %>% full_join(jarsar_block_table2, by='name')
 
 date_columns <- as.Date(names(new_table)[-1], format = "%m-%d-%Y")
 today_date <- as.Date(Sys.Date(), "%m/%d/%y")
@@ -210,13 +228,13 @@ ui <- fluidPage(
       column(2, class = "col-xs-2", style = "padding-left:0px;", 
              # Filter by call schedule
              selectInput("rotation", "Rotation:",
-                         choices = c("", "Janeway", "Barker", "Longcope", "Thayer", "Wolf", "Brancati", "MICU", "CCU", "MPC", "NightWatch", "Ambulatory", "MTL", "Solids", "Leuks", "PCCU", "Relief","NATO", "Jeopardy", "MICU", "CCU", "Triage", "MPC","BMICU", 'BCCU', "CJ", "Liver", "Polk", "Ambulatory", "MTL", "Solids", "Leuks", "GenCards", 'Cardiomyopathy', "FirmJAR", "Research", "Elective", 'Peds', "Women'sHealth", "AddictionMedicine", "HIV/HCV", "Geri"), 
+                         choices = c("", "Janeway", "Barker", "Longcope", "Thayer", "Wolf", "Brancati", "MICU", "CCU", "MPC", "NightWatch", "Ambulatory", "MTL", "Solids", "Leuks", "PCCU", "Relief","NATO/DATO", "Jeopardy", "MICU", "CCU", "Triage", "MPC","BMICU", 'BCCU', "CJ", "Liver", "Polk", "Ambulatory", "MTL", "Solids", "Leuks", "GenCards", 'Cardiomyopathy', "FirmJAR", "Research", "Elective", 'Peds', "Women'sHealth", "AddictionMedicine", "HIV/HCV", "Geri"), 
                          selected = NULL)
       ),
       column(2, class = "col-xs-2", style = "padding-left:0px;", 
              # Filter by call schedule
              selectInput("callSchedule", "Call Schedule:",
-                         choices = c("", "CALL", "POST", "OFF", "DAY", "GOOD", "NIGHT", "SHORT", "NEWS/OLDS", "BOOK"), 
+                         choices = c("", "CALL", "POST", "OFF", "DAY", "GOOD", "NIGHT", "SHORT", "NEWS/OLDS", "BOOK", "NATO/DATO"), 
                          selected = NULL)
       )
     ), 

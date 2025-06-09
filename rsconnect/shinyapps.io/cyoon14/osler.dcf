@@ -5,9 +5,9 @@ account: cyoon14
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 12632468
-bundleId: 10348567
+bundleId: 10419640
 url: https://cyoon14.shinyapps.io/osler/
 version: 1
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: .ipynb_checkpoints/osler_intern_schedule_final-checkpoint.ipynb|.RData|intern|jarsar
+ignoredFiles: .ipynb_checkpoints/osler_intern_schedule_final-checkpoint.ipynb|.RData|README.md|intern_schedule|intern|jar_sar_schedule|jarsar|jarsar2025
