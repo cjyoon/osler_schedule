@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
+
 import icalendar
 import pytz, zoneinfo, dateutil.tz  # timezone libraries
 import datetime, icalendar
@@ -11,7 +12,6 @@ from datetime import datetime, timedelta
 import re
 from ics import Calendar, Event
 import math
-
 
 
 def convert_datestring (datestring):
@@ -35,6 +35,7 @@ def date_lists(start_date, end_date):
         current_date += timedelta(days=1)
     return dates
     
+
         
 def block_dates (block_id, my_dict):
     """get start and end date for each block by going through the master yaml """
@@ -44,7 +45,6 @@ def block_dates (block_id, my_dict):
  
 
 def add_date_postcall_into_next_block(call_cycle, block_days):
-    
     if re.search(r'^\*', call_cycle[-1]):
         # Step 1: Get the last date in the list
         last_date = block_days[-1]
@@ -55,6 +55,7 @@ def add_date_postcall_into_next_block(call_cycle, block_days):
         # Step 3: Add the new date to the list
         block_days.append(next_date)
     return block_days
+    
     
 def get_specific_rotation_schedule(block_id, rotation, my_dict):
     rotation = re.sub('\s', '', rotation)
@@ -83,23 +84,25 @@ def get_specific_rotation_schedule(block_id, rotation, my_dict):
     
 
 
+
 # Read master tables
 with open("/Users/cjyoon/Dropbox/Osler/Osler_shiny/jarsar2025//call_schedule_master.yaml") as f:
     my_dict = yaml.safe_load(f)
 
-        
+    
+
+    
 master_schedule = pd.read_excel('/Users/cjyoon/Dropbox/Osler/Osler_shiny/jarsar2025/Resident Schedule 2025-2026.xlsx', sheet_name='Schedule')
 
 # Combine first two columns into a new 'name' column
 master_schedule['name'] = master_schedule.iloc[:, 0] + '_' + master_schedule.iloc[:, 1]
 
+# Optional: drop the original first two columns
 master_schedule = master_schedule.drop(master_schedule.columns[[0, 1]], axis=1)
 master_schedule = master_schedule[['name'] + [col for col in master_schedule.columns if col != 'name']]
 
 resident_names = master_schedule['name'].tolist()
 resident_names = [x for x in resident_names if not (isinstance(x, float) and math.isnan(x))]
-resident_names
-
 
 
 def update_values_to_uppercase(data):
@@ -129,9 +132,11 @@ def add_combined_key(data):
 def oncology_schedule(rotation, date): 
     schedule = 'DAY'
     
-    if date.weekday() == 6 and rotation == 'MTL': #off day is Monday
+    if date.weekday() == 5 and rotation == 'MTL': #off day is Saturday
         schedule = 'OFF'
-    elif date.weekday() == 5 and rotation in ['Solids', 'Leuks', 'Heme']: #off day is Saturday
+    elif date.weekday() == 5 and rotation in ['Heme']: #off day is Saturday
+        schedule = 'OFF'
+    elif date.weekday() == 6 and rotation in ['Solids', 'Leuks']: # off day is Sunday
         schedule = 'OFF'
     elif date.weekday() in  [5, 6] and  re.search(r'Pathway|Elective|Research|Geri|UH|Addiction|Women|HCH|HIV|Ambulatory', rotation): #ambo off day is Saturday and Sunday
         schedule = 'OFF'
@@ -145,7 +150,6 @@ bayview_conversion = dict({'Call': 'CALL', 'Post': 'POST', 'Continuity': 'CONT',
 
 # read in bayview schedule and format column to a string form of dates     
 bayview_schedule = pd.read_excel('/Users/cjyoon/Dropbox/Osler/Osler_shiny/jarsar2025/bayview_unit_2025.xlsx')
-
 # Convert columns to string format
 # Convert columns to datetime where possible
 new_columns = []
@@ -200,6 +204,7 @@ updated_dict = update_values_to_uppercase(updated_dict)
 my_dict = updated_dict # overwrite after adding the 'Z' keys for blocks which specific resident role is not defined
 
 
+
 def get_schedule(resident_name, master_schedule):
     """gets the specific intern's schedule from the table"""
     filtered_df = master_schedule[master_schedule.iloc[:, 0] == resident_name]
@@ -217,15 +222,13 @@ master_schedule = master_schedule[master_schedule['name'].notna()].copy()
 # Step 4: Assign new column names
 master_schedule.columns = new_columns
 
-# Convert Supervisor -> Wolf
+
 master_schedule.replace("Supervisor", "Wolf", inplace=True)
 
-master_schedule.sort_values('name').to_csv('/Users/cjyoon/Dropbox/Osler/Osler_shiny/jarsar2025/block_view_jarsar.tsv', sep='\t', index=False)
+master_schedule.sort_values('name').to_csv('/Users/cjyoon/Dropbox/Osler/Osler_shiny/block_schedule/block_view_jarsar2025.tsv', sep='\t', index=False)
 
 
-# Go through each resident and create schedule .ics and .tsv files
 for resident_name in resident_names:
-    print(resident_name)
     date_list = []
     schedule_list = []        
     my_blocks = (get_schedule(resident_name, master_schedule))
@@ -241,9 +244,9 @@ for resident_name in resident_names:
                     rotation = ' '
 
                 rotation = re.sub('\s', '', rotation)
-
                 
                 block_days = block_dates(block_id, my_dict)        
+
                 try:
                     call_cycle = get_specific_rotation_schedule(block_id.upper(), rotation, my_dict)
                 except:
@@ -282,6 +285,11 @@ for resident_name in resident_names:
                     event = Event()  # Create a new event object inside the loop
                     if rotation == 'Supervisor': # change supervisor into more commonly referred Wolf
                         rotation = 'Wolf'
+                        
+                    if rotation == 'MPClinic':
+                        rotation = 'MP_Clinic'
+                        
+                        
                     event.name = f'{block_id} {rotation} {schedule}'
                     event.begin = date
                     event.make_all_day()  # Make the event an all-day event
@@ -293,5 +301,7 @@ for resident_name in resident_names:
 
 
         # Write the calendar to a .ics file
-        with open(f"/Users/cjyoon/Dropbox/Osler/Osler_shiny/jarsar2025/schedule/{resident_name}_schedule.ics", "w") as f:
+        with open(f"/Users/cjyoon/Dropbox/Osler/Osler_shiny/www/schedule2025/{resident_name}_schedule.ics", "w") as f:
             f.writelines(calendar.serialize_iter())
+
+    

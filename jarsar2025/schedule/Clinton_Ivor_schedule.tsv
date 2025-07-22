@@ -34,20 +34,21 @@ Clinton_Ivor	08-01-2025	2A BCCU-3 POST
 Clinton_Ivor	08-02-2025	2A BCCU-3 CONT
 Clinton_Ivor	08-03-2025	2A BCCU-3 CALL
 Clinton_Ivor	08-04-2025	2A BCCU-3 POST
-Clinton_Ivor	08-05-2025	2B Cardiomyopathy-4 POST
-Clinton_Ivor	08-06-2025	2B Cardiomyopathy-4 DAY
-Clinton_Ivor	08-07-2025	2B Cardiomyopathy-4 DAY
-Clinton_Ivor	08-08-2025	2B Cardiomyopathy-4 CALL
-Clinton_Ivor	08-09-2025	2B Cardiomyopathy-4 POST
-Clinton_Ivor	08-10-2025	2B Cardiomyopathy-4 OFF
-Clinton_Ivor	08-11-2025	2B Cardiomyopathy-4 DAY
-Clinton_Ivor	08-12-2025	2B Cardiomyopathy-4 CALL
-Clinton_Ivor	08-13-2025	2B Cardiomyopathy-4 POST
-Clinton_Ivor	08-14-2025	2B Cardiomyopathy-4 GENCARDS
-Clinton_Ivor	08-15-2025	2B Cardiomyopathy-4 DAY
-Clinton_Ivor	08-16-2025	2B Cardiomyopathy-4 CALL
-Clinton_Ivor	08-17-2025	2B Cardiomyopathy-4 POST
-Clinton_Ivor	08-18-2025	2B Cardiomyopathy-4 OFF
+Clinton_Ivor	08-05-2025	2B Cardiomyopathy-2 DAY
+Clinton_Ivor	08-06-2025	2B Cardiomyopathy-2 CALL
+Clinton_Ivor	08-07-2025	2B Cardiomyopathy-2 POST
+Clinton_Ivor	08-08-2025	2B Cardiomyopathy-2 GENCARDS
+Clinton_Ivor	08-09-2025	2B Cardiomyopathy-2 DAY
+Clinton_Ivor	08-10-2025	2B Cardiomyopathy-2 CALL
+Clinton_Ivor	08-11-2025	2B Cardiomyopathy-2 POST
+Clinton_Ivor	08-12-2025	2B Cardiomyopathy-2 OFF
+Clinton_Ivor	08-13-2025	2B Cardiomyopathy-2 DAY
+Clinton_Ivor	08-14-2025	2B Cardiomyopathy-2 CALL
+Clinton_Ivor	08-15-2025	2B Cardiomyopathy-2 POST
+Clinton_Ivor	08-16-2025	2B Cardiomyopathy-2 OFF
+Clinton_Ivor	08-17-2025	2B Cardiomyopathy-2 DAY
+Clinton_Ivor	08-18-2025	2B Cardiomyopathy-2 CALL
+Clinton_Ivor	08-19-2025	2B Cardiomyopathy-2 *POST
 Clinton_Ivor	08-19-2025	3A Ambulatory DAY
 Clinton_Ivor	08-20-2025	3A Ambulatory DAY
 Clinton_Ivor	08-21-2025	3A Ambulatory DAY
@@ -76,20 +77,20 @@ Clinton_Ivor	09-12-2025	3B BMICU-3 POST
 Clinton_Ivor	09-13-2025	3B BMICU-3 CONT
 Clinton_Ivor	09-14-2025	3B BMICU-3 CALL
 Clinton_Ivor	09-15-2025	3B BMICU-3 POST
-Clinton_Ivor	09-16-2025	4A Jeopardy JEOPARDY
-Clinton_Ivor	09-17-2025	4A Jeopardy JEOPARDY
-Clinton_Ivor	09-18-2025	4A Jeopardy JEOPARDY
-Clinton_Ivor	09-19-2025	4A Jeopardy JEOPARDY
-Clinton_Ivor	09-20-2025	4A Jeopardy JEOPARDY
-Clinton_Ivor	09-21-2025	4A Jeopardy JEOPARDY
-Clinton_Ivor	09-22-2025	4A Jeopardy JEOPARDY
-Clinton_Ivor	09-23-2025	4A Jeopardy JEOPARDY
-Clinton_Ivor	09-24-2025	4A Jeopardy JEOPARDY
-Clinton_Ivor	09-25-2025	4A Jeopardy JEOPARDY
-Clinton_Ivor	09-26-2025	4A Jeopardy JEOPARDY
-Clinton_Ivor	09-27-2025	4A Jeopardy JEOPARDY
-Clinton_Ivor	09-28-2025	4A Jeopardy JEOPARDY
-Clinton_Ivor	09-29-2025	4A Jeopardy JEOPARDY
+Clinton_Ivor	09-16-2025	4A CJ DAYS/DAYS
+Clinton_Ivor	09-17-2025	4A CJ DAYS/DAYS
+Clinton_Ivor	09-18-2025	4A CJ DAYS/DAYS
+Clinton_Ivor	09-19-2025	4A CJ DAYS/DAYS
+Clinton_Ivor	09-20-2025	4A CJ BOOK/OFF
+Clinton_Ivor	09-21-2025	4A CJ BOOK/OFF
+Clinton_Ivor	09-22-2025	4A CJ DAYS/DAYS
+Clinton_Ivor	09-23-2025	4A CJ DAYS/DAYS
+Clinton_Ivor	09-24-2025	4A CJ DAYS/DAYS
+Clinton_Ivor	09-25-2025	4A CJ DAYS/DAYS
+Clinton_Ivor	09-26-2025	4A CJ DAYS/DAYS
+Clinton_Ivor	09-27-2025	4A CJ OFF/BOOK
+Clinton_Ivor	09-28-2025	4A CJ OFF/BOOK
+Clinton_Ivor	09-29-2025	4A CJ DAYS/DAYS
 Clinton_Ivor	09-30-2025	4B Vacation VACATION
 Clinton_Ivor	10-01-2025	4B Vacation VACATION
 Clinton_Ivor	10-02-2025	4B Vacation VACATION
@@ -171,13 +172,13 @@ Clinton_Ivor	12-16-2025	7A Ambulatory DAY
 Clinton_Ivor	12-17-2025	7A Ambulatory DAY
 Clinton_Ivor	12-18-2025	7A Ambulatory DAY
 Clinton_Ivor	12-19-2025	7A Ambulatory DAY
-Clinton_Ivor	12-20-2025	Holiday 1 Cardiomyopathy -
-Clinton_Ivor	12-21-2025	Holiday 1 Cardiomyopathy -
-Clinton_Ivor	12-22-2025	Holiday 1 Cardiomyopathy -
-Clinton_Ivor	12-23-2025	Holiday 1 Cardiomyopathy -
-Clinton_Ivor	12-24-2025	Holiday 1 Cardiomyopathy -
-Clinton_Ivor	12-25-2025	Holiday 1 Cardiomyopathy -
-Clinton_Ivor	12-26-2025	Holiday 1 Cardiomyopathy -
+Clinton_Ivor	12-20-2025	Holiday 1 Cardiomyopathy-3 DAY
+Clinton_Ivor	12-21-2025	Holiday 1 Cardiomyopathy-3 DAY
+Clinton_Ivor	12-22-2025	Holiday 1 Cardiomyopathy-3 CALL
+Clinton_Ivor	12-23-2025	Holiday 1 Cardiomyopathy-3 POST
+Clinton_Ivor	12-24-2025	Holiday 1 Cardiomyopathy-3 DAY
+Clinton_Ivor	12-25-2025	Holiday 1 Cardiomyopathy-3 CALL
+Clinton_Ivor	12-26-2025	Holiday 1 Cardiomyopathy-3 POST
 Clinton_Ivor	12-27-2025	Holiday 2 Off OFF
 Clinton_Ivor	12-28-2025	Holiday 2 Off OFF
 Clinton_Ivor	12-29-2025	Holiday 2 Off OFF
