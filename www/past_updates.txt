@@ -1,0 +1,10 @@
+
+
+--- Changes for JAR/SAR on 07-21-25 ---
+Danielle Amundson 3B: MICU-B / Jeopardy -> MICU-F / Jeopardy
+Charbel Gharios 3B: Jeopardy / MICU-B -> Jeopardy / MICU-F
+Dylan Zerjav 3B: MICU-F -> MICU-B
+
+(7/20): Resident & Intern spreadsheet updated. 
+(7/12): CJ/Polk/Meg 1B intern schedule fixed. Golden weekends.
+(7/4): CCU schedule updated. Oncology templates adjusted. Solid Resident -> Yellow, Solid Intern -> Green. 

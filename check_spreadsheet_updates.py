@@ -28,8 +28,8 @@ PAST_UPDATES_FILE = "www/past_updates.txt"
 DEPLOY_SCRIPT = "/Users/cjyoon/Dropbox/Osler/Osler_shiny/run_schedule.sh"
 
 DOWNLOAD_PATHS = {
-    "intern": "/Users/cjyoon/Dropbox/Osler/Osler_shiny/intern2025/Interns 2025-2026.xlsx",
-    "jarsar": "/Users/cjyoon/Dropbox/Osler/Osler_shiny/jarsar2025/Resident Schedule 2025-2026.xlsx"
+    "Intern": "/Users/cjyoon/Dropbox/Osler/Osler_shiny/intern2025/Interns 2025-2026.xlsx",
+    "JAR/SAR": "/Users/cjyoon/Dropbox/Osler/Osler_shiny/jarsar2025/Resident Schedule 2025-2026.xlsx"
 }
 
 # Ensure necessary directories exist
